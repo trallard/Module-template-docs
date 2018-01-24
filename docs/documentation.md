@@ -1,4 +1,4 @@
-# Documentation
+# 👓 Documentation
 
 > The following is meant as a more complete set of documentation than the QuickStart guide. If you have not yet completed the QuickStart guide it is recommended that you begin there - as it will provide the necessary steps to setting up your GitHub repository and transferring the source files.
 

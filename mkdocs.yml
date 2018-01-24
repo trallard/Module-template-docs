@@ -5,6 +5,7 @@ pages:
 - Quickstart: index.md
 - Documentation:
   - Working locally: documentation.md
+  - Adding content: add_content.md
 
 theme:
   name: 'material'
