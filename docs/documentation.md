@@ -2,7 +2,7 @@
 
 > The following is meant as a more complete set of documentation than the QuickStart guide. If you have not yet completed the QuickStart guide it is recommended that you begin there - as it will provide the necessary steps to setting up your GitHub repository and transferring the source files.
 
-## Software Requirements
+## ✨Software Requirements
 In order to edit your Modules  template website locally you will need the following pieces of software:
 
 * Text Editor
@@ -11,7 +11,7 @@ In order to edit your Modules  template website locally you will need the follow
 
 
 
-## How to use Jekyll to build this site?
+## ✨ How to use Jekyll to build this site?
 
 ### Editing pages online with GitHub
 
@@ -71,7 +71,7 @@ trigger an automatic recompilation!
 
 ---
 
-## Important Files and Folders
+## ✨ Important Files and Folders
 
 In order to better understand how everything in your site works, there are a few files and folders that you need to be aware of. These files control the main elements of your site, including your logo, bio photo and navigation. Full documentation of the directory structure can be found [here](https://jekyllrb.com/docs/structure/).
 
@@ -87,3 +87,47 @@ In order to better understand how everything in your site works, there are a few
 
 
 * **pages/about.md** - This contains the main information of your module and is rendered as the Getting started section in the landing page.
+
+---
+
+## ✨ Customising your site's appearance
+
+### How do I change the colour scheme?
+The color scheme follows [Google's material design](https://material.io/guidelines/style/color.html#color-color-palette) style and is specified in terms of a primary and a secondary color, which can be modified in the `basic_style.scss` file in the root directory.
+
+If you want to modify the color scheme or the fonts used you only need to modify this file and they will be automatically updated as the site is built. You can use RGB or HEX values.
+
+  ```
+  $primary: #778f9b;
+  ```
+
+Alternatively, a guide for the MDB colour aliases can be found [here](https://mdbootstrap.com/css/colors/).
+
+Note that depending on colour scheme you use for your website you might need to change the colour of some components to ensure appropriate contrast and readability.
+
+The banner and navigation bar font colour can be changed to improve readability in the same `basic_style.scss`:
+
+   ```
+   $banner-col: $black;
+   ```
+
+You can choose to have a `$white` or a `$black` font, or even assign a custom colour.
+
+### Adding a logo and card images
+
+If you need to add a logo to your website you can do it by saving the image to the 'images' folder and modify the name of the image in the `config.yml` file:
+```yaml
+logo: "./images/logo-sheffield.png"
+```
+similarly, if you want all the landing page cards to display the same image change the path accordingly in the `_config.yml` file
+```yaml
+card_image: "./images/dna.jpg"
+```
+otherwise, if you want to have different images for your various modules, you will have to specify an image on the module file YAML front matter e.g.
+```yaml
+layout: module
+title: Day 1 outline
+category: module
+description: This is the description for the module
+featured: ./images/dna2.jpg
+```

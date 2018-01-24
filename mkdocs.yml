@@ -4,7 +4,7 @@ pages:
 - About: about.md
 - Quickstart: index.md
 - Documentation:
-  - Working locally: documentation.md
+  - Getting started: documentation.md
   - Adding content: add_content.md
 
 theme:
