@@ -74,6 +74,17 @@ As you can see in the image above, the rendered notebook shows the following inf
 
 - The code version (sha1 for the latest version, or Git commit)
 - When it was last updated and by whom
-- Badge indicating validation: this is done using *nbval* and tells you if your notebook is broken 
+- Badge indicating validation: this is done using *nbval* and tells you if your notebook is broken
 
 If your notebooks are not committed to your version control system nbjekyll will not be able to convert and add the super nice and informative heading!
+
+## ✨ Enabling Continuous Integration for your site
+
+Testing your software regularly makes it easier to find and fix bugs 🐛. Your newly created Jekyll website can be automatically tested using Travis CI, follow the next steps:
+
+1. Go to [https://travis-ci.org/](https://travis-ci.org/) and sign in using your GitHub account.
+2. In the upper right corner click on your name (or choose Accounts) to open your Travis-ci profile.
+You'll be presented with the list of your GitHub projects (only the ones where you have administrative authority) e.g.
+3. Enable Travis CI on your site repository ![CI](./img/CI.png)
+
+We have provided the necessary `.travis.yml` file and a script `scripts/site_check` within Modules template. So the next time you push your changes to GitHub Travis CI will check your site for broken links, images, and missing HTML tags.
