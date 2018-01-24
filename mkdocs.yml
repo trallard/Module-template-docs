@@ -6,6 +6,7 @@ pages:
 - Documentation:
   - Getting started: documentation.md
   - Adding content: add_content.md
+  - Advanced features: advanced.md
 
 theme:
   name: 'material'

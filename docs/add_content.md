@@ -41,7 +41,8 @@ You can then start populating these with other .md files or jupyter notebooks.
 The urls and redirects to the files within the collection folders are generated
 automatically and added to the front page of each module/project.
 
-<img src='img/Module.PNG' alt='modules'>
+
+![module](./img/Module.PNG)
 
 Any additional pages (e.g. about, code of conduct, profile, resources) must be created and saved in the `_pages` directory.
 Once this is done the pages will be automatically added to the sidebar menu.
