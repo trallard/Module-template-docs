@@ -1,0 +1,10 @@
+site_name: Modules template
+
+pages:
+- About: about.md
+- Quickstart: index.md
+- Documentation:
+  - Documentation: documentation.md
+
+theme:
+  name: 'material'
