@@ -4,7 +4,7 @@ pages:
 - About: about.md
 - Quickstart: index.md
 - Documentation:
-  - Documentation: documentation.md
+  - Working locally: documentation.md
 
 theme:
   name: 'material'
