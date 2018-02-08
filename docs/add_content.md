@@ -60,11 +60,14 @@ Reveal.js is integrated so that you can generate your slides using .md files. To
     tags: [intro, beginner, jekyll, tutorial]
     comments: true
     category: presentation
+    theme: simple
     ---
     <section data-markdown>
     # Add Reveal.js slide content here, following the Reveal.js format
     # Each <section> corresponds to a slide in the presentation deck
     </section>
+
+You can choose any of the default [Reveal.js themes](https://github.com/hakimel/reveal.js) in the YAML front matter (e.g. `theme: simple`), othwerwise, the default theme will be the black theme.
 
 Note that Reveal.js presentations must use **slide** as the layout and **presentation** as the category.
 
