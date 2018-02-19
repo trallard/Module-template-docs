@@ -17,25 +17,33 @@ This will add the following badge to your repo README:
 <a href="https://notebooks.azure.com/import/gh/trallard/Modules_template"><img src="https://img.shields.io/badge/launch-azurenb-blue.svg" /></a>
 
 You will then be able to click on the `launch azurenb` badge and automatically import the notebooks to [Microsoft Azure Notebooks](https://notebooks.azure.com).
-* Make sure to copy your library url for the following steps.
+*_Make sure to copy your library url for the following steps._*
 
 Once you have the notebooks in a Microsoft Azure Notebooks library you can add a 'launch in Azure notebooks'
-button to your notebooks within your static website.
+button to your notebooks within your static website (like the one shown below).
 
 ![Azure](./img/Azure.PNG)
 
-- To do so, add the url address of your Azure library to the `_config.yml`  file e.g:
+- To do so, you need to set the azure variable in your `_config.yml`  file to true e.g:
 ```
-azure: "https://notebooks.azure.com/trallard/libraries/BAD-days"
+azure: true
 ```
-The button will be automatically added to all the rendered notebooks.
 If you do not have your notebooks in Azure notebooks only comment the line with a
 `#`.
 
+Then you can supply an Azure library per collection (e.g. if you're using this site
+for various course modules) by specifying this in your `_config.yml`:
+```
+collections:
+  - module1
+    azure: "https://notebooks.azure.com/trallard/libraries/BAD-days"
+    output: true
+```
 
-**IMPORTANT:** at the moment the template only supports ONE Azure Notebooks library per website.
+**IMPORTANT:**  the variable needs to be declared as azure to be then added to the
+rendered notebooks
 
-
+---
 
 ## ✨ Converting Jupyter notebooks to Jekyll posts
 You can convert your notebooks locally into a Jekyll compliant post using the [nbjekyll](https://github.com/trallard/nbjekyll) package.
@@ -77,6 +85,8 @@ As you can see in the image above, the rendered notebook shows the following inf
 - Badge indicating validation: this is done using *nbval* and tells you if your notebook is broken
 
 If your notebooks are not committed to your version control system nbjekyll will not be able to convert and add the super nice and informative heading!
+
+---
 
 ## ✨ Enabling Continuous Integration for your site
 
